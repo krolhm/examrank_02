@@ -74,7 +74,10 @@ int ft_printf(const char *str, ...)
 				count_char += ft_count(num, 10);
 				if (width > 0)
 				{
-					width -= ft_count(num, 10);
+					if (range > 0)
+						width -= range;
+					else
+						width -= ft_count(num, 10);
 					while (width-- > 0)
 						count_char += ft_putchar(' ');
 				}
