@@ -40,6 +40,7 @@ int ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
+		// width = 0, range = 0, k = 0;
 		if (str[i] == '%')
 		{
 			i++;
